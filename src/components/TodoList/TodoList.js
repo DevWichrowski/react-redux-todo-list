@@ -3,7 +3,7 @@ import Task from '../Task/Task';
 import './TodoList.scss';
 import { connect } from 'react-redux';
 import { selectTodo } from '../../store/selectors/task.selector';
-import { addTaskAction, deleteTaskAction } from '../../store/actions/todo.action';
+import { deleteTaskAction } from '../../store/actions/todo.action';
 import AddTaskForm from '../AddTaskForm/AddTaskForm';
 
 class TodoList extends Component {
@@ -13,20 +13,24 @@ class TodoList extends Component {
 
 	deleteTask = (task) => {
 		this.props.deleteTask(task);
-	}
+	};
+
+	showTask = (task) => {
+
+	};
 
 	render() {
 		return (
 			<div className="todo-list">
 				<h2>TodoList</h2>
 				{this.props.todoList.map((task, index) => (
-					<Task key={index} task={task} deleteTask={this.deleteTask}/>
+					<Task key={index} task={task} deleteTask={this.deleteTask} />
 				))}
 				<AddTaskForm />
 				<form>
-            <p>Title: </p>
-            <p>Description:</p>
-          </form>
+					<p>Title: </p>
+					<p>Description:</p>
+				</form>
 			</div>
 		);
 	}

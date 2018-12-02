@@ -1,1 +1,1 @@
-export const selectTodo = (state) => state.todoList;
+export const selectTodo = (state) => state.todoList.tasks;

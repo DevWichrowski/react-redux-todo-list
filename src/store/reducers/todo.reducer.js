@@ -3,7 +3,10 @@ import { generateId } from '../../utilities/generate-id';
 
 const initialState = {
 	tasks: [],
-	showTask: ''
+	showTask: {
+		title: '',
+		description: ''
+	}
 };
 
 export function todoReducer(state = initialState, action) {
@@ -16,7 +19,10 @@ export function todoReducer(state = initialState, action) {
 			return { ...state, tasks: [ todo, ...state.tasks ] };
 		}
 		case TodoActions.DELETE_TASK: {
-			return {...state, tasks: state.tasks.filter((todo) => todo.id !== action.payload)};
+			return { ...state, tasks: state.tasks.filter((todo) => todo.id !== action.payload) };
+		}
+		case TodoActions.SHOW_TASK: {
+			return { ...state, showTask: state.tasks.find((todo) => todo.id === action.payload) };
 		}
 
 		default: {

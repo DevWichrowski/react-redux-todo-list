@@ -8,8 +8,9 @@ class Task extends Component {
   render() {
     return (
       <div>
-          <h5>{this.props.title}</h5>
-          <p>{this.props.description}</p>
+          <h5>{this.props.task.title}</h5>
+          <p>{this.props.task.description}</p>
+          <button type="button" onClick={() => this.props.deleteTask(this.props.task)}>Delete</button>
       </div>
     )
   }

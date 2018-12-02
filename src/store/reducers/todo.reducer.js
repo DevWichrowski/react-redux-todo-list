@@ -1,10 +1,7 @@
 import * as TodoActions from '../actions/todo.action';
 import { generateId } from '../../utilities/generate-id';
 
-const initialState = [
-	{id: 'a1', name: 'test'},
-	{id: 'a2', name: 'sdadas'}
-];
+const initialState = [];
 
 export function todoReducer(state = initialState, action) {
 	switch (action.type) {
@@ -15,6 +12,10 @@ export function todoReducer(state = initialState, action) {
 
 			return [ todo, ...state ];
 		}
+		case TodoActions.DELETE_TASK: {
+			return state.filter((todo) => todo.id !== action.payload);
+		}
+
 		default: {
 			return state;
 		}

@@ -2,10 +2,13 @@ import React, { Component } from 'react'
 import './Task.scss';
 
 class Task extends Component {
+  constructor(props){
+    super(props);
+  }
   render() {
     return (
       <div>
-        <h2> Task </h2>
+          <h4>{this.props.name}</h4>
       </div>
     )
   }

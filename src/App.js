@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import './App.scss';
+import TodoList from './components/TodoList/TodoList';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <h2> hello redux </h2>
+        <TodoList />
       </div>
     );
   }

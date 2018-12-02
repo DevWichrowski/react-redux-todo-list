@@ -8,7 +8,8 @@ class Task extends Component {
   render() {
     return (
       <div>
-          <p>{this.props.title}</p>
+          <h5>{this.props.title}</h5>
+          <p>{this.props.description}</p>
       </div>
     )
   }

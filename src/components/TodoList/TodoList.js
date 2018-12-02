@@ -10,16 +10,24 @@ class TodoList extends Component {
 		super(props);
 
 		this.state = {
-			name: ''
+			title: ''
 		};
 	}
+
+	saveTitle = (event) => {
+		this.setState({title: event.target.value})
+	}
+
 	render() {
 		return (
 			<div className="todo-list">
 				<h2>TodoList</h2>
-				{this.props.todoList.map((task, index) => (
-					<Task key={index} name={task.name} />
-          ))}
+				{this.props.todoList.map((task, index) => <Task key={index} title={task.title} />)}
+				<form>
+					<input onChange={this.saveTitle}/>
+					<textarea />
+					<button type="button" onClick={() => this.props.addTask({title: this.state.title})}>Add task</button>
+				</form>
 			</div>
 		);
 	}

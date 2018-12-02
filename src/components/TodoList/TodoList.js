@@ -23,6 +23,10 @@ class TodoList extends Component {
 					<Task key={index} task={task} deleteTask={this.deleteTask}/>
 				))}
 				<AddTaskForm />
+				<form>
+            <p>Title: </p>
+            <p>Description:</p>
+          </form>
 			</div>
 		);
 	}

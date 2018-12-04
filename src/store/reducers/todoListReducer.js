@@ -7,7 +7,7 @@ const initialState = {
 export function todoReducer(state = initialState, action){
     switch(action.type){
         case TodoListAction.CHANGE_NAME: {
-            return {...state, name: 'Wojtek'}
+            return {...state, name: action.payload}
         }
 
         default:{

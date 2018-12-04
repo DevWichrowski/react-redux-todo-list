@@ -1,3 +1,3 @@
 export const CHANGE_NAME = '[App] change name';
 
-export const changeNameAction = () => ({type: CHANGE_NAME});
+export const changeNameAction = (payload) => ({type: CHANGE_NAME, payload});

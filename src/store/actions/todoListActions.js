@@ -1,3 +1,3 @@
-export const CHANGE_NAME = '[App] change name';
+export const ADD_TASK = '[App] change name';
 
-export const addItemAction = (payload) => ({type: CHANGE_NAME, payload});
+export const addTaskAction = (payload) => ({type: ADD_TASK, payload});

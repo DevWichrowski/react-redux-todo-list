@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { changeNameAction } from './store/actions/todoListActions';
+import { addItemAction } from './store/actions/todoListActions';
 import './App.scss';
 
 class App extends Component {
@@ -8,7 +8,8 @@ class App extends Component {
     super(props);
 
     this.state = {
-      tempName: ''
+      tempName: '',
+      tempDescription: ''
     }
   }
 
@@ -16,13 +17,19 @@ class App extends Component {
     this.setState({tempName: e.target.value});
   }
 
+  saveDescription = (e) => {
+    this.setState({tempDescription: e.target.value})
+  }
+q
 
 	render() {
 		return (
 			<div className="App">
-				<h1> Hi reduc, name from store is: {this.props.todoList.name}</h1>
+				<h1>{this.props.todoList.name}</h1>
+        <h2>{this.props.todoList.description}</h2>
         <input onChange={this.saveName}></input>
-				<button onClick={() => this.props.changeName(this.state.tempName)}>Change name</button>
+        <textarea onChange={this.saveDescription}></textarea>
+				<button onClick={() => this.props.addItem({name: this.state.tempName, description: this.state.tempDescription})}>Change name</button>
 			</div>
 		);
 	}
@@ -33,7 +40,7 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	changeName: (payload) => dispatch(changeNameAction(payload))
+	addItem: (payload) => dispatch(addItemAction(payload))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

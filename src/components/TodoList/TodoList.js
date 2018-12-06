@@ -27,7 +27,7 @@ class TodoList extends Component {
 				{this.props.todoList.tasks.map((item, index) => {
 					return (
 						<div className="border" key={index}>
-                        <Task name = {item.name} description = {item.description}/>
+							<Task name={item.name} description={item.description} />
 						</div>
 					);
 				})}

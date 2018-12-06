@@ -1,16 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Task extends Component {
-	constructor(props) {
-		super(props);
-	}
-
-	render() {
-		return (
+const Task = (props) => {
+	return (
+		<div>
 			<div className="Task">
-				<p>{this.props.name}</p>
-				<p>{this.props.description}</p>
+				<p>{props.name}</p>
+				<p>{props.description}</p>
 			</div>
-		);
-	}
-}
+		</div>
+	);
+};
+
+export default Task;

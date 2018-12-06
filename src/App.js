@@ -27,19 +27,23 @@ class App extends Component {
 			<div className="App">
 				{this.props.todoList.tasks.map((item, index) => {
 					return (
-						<div>
-							<h1>{item.name}</h1>
-							<h2>{item.description}</h2>
+						<div className="border">
+							<p>{item.name}</p>
+							<p>{item.description}</p>
 						</div>
 					);
 				})}
+				<p>name:</p>
 				<input onChange={this.saveName} />
+				<br />
+				<p>description:</p>
 				<textarea onChange={this.saveDescription} />
+				<br />
 				<button
 					onClick={() =>
 						this.props.addItem({ name: this.state.tempName, description: this.state.tempDescription })}
 				>
-					Change name
+					Add task
 				</button>
 			</div>
 		);

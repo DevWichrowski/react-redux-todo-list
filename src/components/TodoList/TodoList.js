@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addTaskAction } from '../../store/actions/todoListActions';
+import Task from '../Task/Task';
 
 class TodoList extends Component {
 	constructor(props) {
@@ -25,9 +26,8 @@ class TodoList extends Component {
 			<div className="TodoList">
 				{this.props.todoList.tasks.map((item, index) => {
 					return (
-						<div className="border">
-							<p>{item.name}</p>
-							<p>{item.description}</p>
+						<div className="border" key={index}>
+                        <Task name = {item.name} description = {item.description}/>
 						</div>
 					);
 				})}

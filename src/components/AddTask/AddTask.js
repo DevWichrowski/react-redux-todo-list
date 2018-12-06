@@ -23,7 +23,7 @@ class AddTask extends Component {
 	render() {
 		return (
 			<div className="AddTask">
-                <h2>Add Task</h2>
+				<h2>Add Task</h2>
 				<p>name:</p>
 				<input onChange={this.saveName} />
 				<br />

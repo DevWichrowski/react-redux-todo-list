@@ -1,14 +1,26 @@
 import React from 'react';
+import { deleteTaskAction } from '../../store/actions/todoListActions';
+import { connect } from 'react-redux';
+import {Component } from 'react';
 
-const Task = (props) => {
-	return (
-		<div>
+class Task extends Component {
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
 			<div className="Task">
-				<p>{props.name}</p>
-				<p>{props.description}</p>
+				<p>{this.props.name}</p>
+				<p>{this.props.description}</p>
+				<button onClick={() => this.props.deleteTask(this.props.id)}>Delete</button>
 			</div>
-		</div>
-	);
-};
+		);
+	}
+}
 
-export default Task;
+const mapDispatchToProps = (dispatch) => ({
+	deleteTask: (payload) => dispatch(deleteTaskAction(payload))
+});
+
+export default connect(null, mapDispatchToProps)(Task);

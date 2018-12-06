@@ -21,7 +21,7 @@ export function todoReducer(state = initialState, action) {
 			return { ...state, tasks: [ ...state.tasks, task ] };
 		}
 		case TodoListAction.DELETE_TASK: {
-			return { ...state, tasks: [ state.task.filter((id) => state.task.id === id) ] };
+			return { ...state, tasks: [ state.tasks.filter((task) => task.id !== action.payload) ] };
 		}
 
 		default: {

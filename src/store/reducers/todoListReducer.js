@@ -1,6 +1,6 @@
 import * as TodoListAction from '../actions/todoListActions';
 
-const idGenerator = () => {
+export const idGenerator = () => {
 	return '_' + Math.random().toString(36).substr(2, 9);
 };
 

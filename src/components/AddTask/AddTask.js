@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addTaskAction } from '../../store/actions/todoListActions';
 import './AddTask.scss';
+import { idGenerator } from '../../store/reducers/todoListReducer';
 
 class AddTask extends Component {
 	constructor(props) {
@@ -32,7 +33,7 @@ class AddTask extends Component {
 				<br />
 				<button
 					onClick={() =>
-						this.props.addItem({ name: this.state.tempName, description: this.state.tempDescription })}
+						this.props.addItem({id: idGenerator() ,name: this.state.tempName, description: this.state.tempDescription })}
 				>
 					Add task
 				</button>

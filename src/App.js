@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.scss';
 import TodoList from './components/TodoList/TodoList';
 import AddTask from './components/AddTask/AddTask';
+import ShowTask from './components/ShowTask/ShowTask';
 
 class App extends Component {
 	render() {
@@ -10,6 +11,7 @@ class App extends Component {
 				<TodoList />
 				<br />
 				<AddTask />
+				<ShowTask />
 			</div>
 		);
 	}

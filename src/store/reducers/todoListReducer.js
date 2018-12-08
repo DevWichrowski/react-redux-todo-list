@@ -16,7 +16,9 @@ const initialState = {
 			name: 'Redux',
 			description: 'develop your skills in redux'
 		}
-	]
+	],
+	showName: '',
+	showDescription:''
 };
 
 export function todoReducer(state = initialState, action) {
@@ -29,7 +31,7 @@ export function todoReducer(state = initialState, action) {
 			return { ...state, tasks: state.tasks.filter((task) => task.id !== action.payload.id) };
 		}
 		case TodoListAction.SHOW_TASK: {
-			return state.tasks.filter((task) => task.id === action.payload.id);
+			return  {...state, showName: action.payload.name, showDescription: action.payload.description}			
 		}
 
 		default: {

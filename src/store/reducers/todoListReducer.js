@@ -18,7 +18,8 @@ const initialState = {
 		}
 	],
 	showName: '',
-	showDescription: ''
+	showDescription: '',
+	editedItemId: ''
 };
 
 export function todoReducer(state = initialState, action) {
@@ -31,12 +32,23 @@ export function todoReducer(state = initialState, action) {
 			return { ...state, tasks: state.tasks.filter((task) => task.id !== action.payload.id) };
 		}
 		case TodoListAction.SHOW_TASK: {
-			return { ...state, showName: action.payload.name, showDescription: action.payload.description };
+			return {
+				...state,
+				showName: action.payload.name,
+				showDescription: action.payload.description,
+				editedItemId: action.payload.id
+			};
 		}
 		case TodoListAction.EDIT_TASK: {
-			const foundTask = { ...state.tasks, tasks: state.tasks.filter((task) => task.id !== action.payload.id) };
-			const editedTask = { name: action.payload.name, description: action.payload.description };
-			return { ...state, tasks: [ foundTask, editedTask ] };
+			return {
+				...state,
+				tasks: state.tasks.map(
+					(task) =>
+						task.id === state.editedItemId
+							? { ...task, name: action.payload.name, description: action.payload.description }
+							: task
+				)
+			};
 		}
 
 		default: {

@@ -3,6 +3,7 @@ import './App.scss';
 import TodoList from './components/TodoList/TodoList';
 import AddTask from './components/AddTask/AddTask';
 import ShowTask from './components/ShowTask/ShowTask';
+import EditTask from './components/EditTask/EditTask';
 
 class App extends Component {
 	render() {
@@ -12,6 +13,7 @@ class App extends Component {
 				<br />
 				<AddTask />
 				<ShowTask />
+				<EditTask />
 			</div>
 		);
 	}

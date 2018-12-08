@@ -3,9 +3,9 @@ import { connect } from 'react-redux';
 import './ShowTask.scss';
 
 class ShowTask extends Component {
-    constructor(props){
-        super(props);
-    }
+	constructor(props) {
+		super(props);
+	}
 	render() {
 		return (
 			<div className="ShowTask">

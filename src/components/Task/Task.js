@@ -14,6 +14,7 @@ class Task extends Component {
 				<p>{this.props.name}</p>
 				<p>{this.props.description}</p>
 				<button onClick={() => this.props.showTask(this.props)}>Show</button>
+				<button onClick={() => this.props.showTask(this.props)}>Edit</button>
 				<button onClick={() => this.props.deleteTask(this.props)}>Delete</button>
 			</div>
 		);

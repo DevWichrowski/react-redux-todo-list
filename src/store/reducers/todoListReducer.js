@@ -7,14 +7,14 @@ export const idGenerator = () => {
 const initialState = {
 	tasks: [
 		{
-			id: 'afdsadfs',
-			name: 'zrob bulki',
-			description: 'musisz zrobic bulki gosciu'
+			id: idGenerator(),
+			name: 'React',
+			description: 'Develop your skills in react'
 		},
 		{
-			id: 'cxvvxcvx',
-			name: 'zrob bulki',
-			description: 'musisz zrobic bulki gosciu'
+			id: idGenerator(),
+			name: 'Redux',
+			description: 'develop your skills in redux'
 		}
 	]
 };
@@ -27,6 +27,9 @@ export function todoReducer(state = initialState, action) {
 		}
 		case TodoListAction.DELETE_TASK: {
 			return { ...state, tasks: state.tasks.filter((task) => task.id !== action.payload.id) };
+		}
+		case TodoListAction.SHOW_TASK: {
+			return state.tasks.filter((task) => task.id === action.payload.id);
 		}
 
 		default: {

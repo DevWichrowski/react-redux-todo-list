@@ -23,6 +23,7 @@ class AddTask extends Component {
 	};
 	render() {
 		return (
+			
 			<div className="AddTask">
 				<h2>Add Task</h2>
 				<p>name:</p>

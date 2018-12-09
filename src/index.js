@@ -6,6 +6,9 @@ import * as serviceWorker from './serviceWorker';
 import { createStore, applyMiddleware } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
+import 'primereact/resources/themes/nova-light/theme.css';
+import 'primereact/resources/primereact.min.css';
+import 'primeicons/primeicons.css';
 import Provider from 'react-redux/es/components/Provider';
 import { rootReducer } from './store/reducers/rootReducer';
 

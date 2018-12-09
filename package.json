@@ -5,6 +5,8 @@
   "dependencies": {
     "node-sass": "^4.10.0",
     "normalize.css": "^8.0.1",
+    "primeicons": "^1.0.0",
+    "primereact": "^2.0.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-redux": "^5.1.1",

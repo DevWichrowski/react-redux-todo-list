@@ -2,24 +2,21 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Dialog } from 'primereact/dialog';
 import './ShowTask.scss';
+import { showButtonHandler } from '../../store/actions/todoListActions';
 
 class ShowTask extends Component {
 	constructor(props) {
 		super(props);
-
-		this.state = {
-			visible: true
-		}
 	}
 	render() {
 		return (
-			<Dialog header={this.props.todoList.showName} visible={this.state.visible} width="350px" modal={true} onHide={(e) => this.setState({visible: false})}>
-				<div className="ShowTask">
+			<Dialog header={`${this.props.todoList.showName}`} visible={this.props.todoList.showTaskVisible} width="350px" modal={true} onHide={this.props.toggleShowTask}>
+				{/* <div className="ShowTask"> */}
 					<p>Task name:</p>
 					<p>{this.props.todoList.showName}</p>
 					<p>Task Description:</p>
 					<p>{this.props.todoList.showDescription}</p>
-				</div>
+				{/* </div> */}
 			</Dialog>
 		);
 	}
@@ -29,4 +26,7 @@ const mapStateToProps = (state) => ({
 	todoList: state.todoList
 });
 
-export default connect(mapStateToProps, null)(ShowTask);
+const mapDispatchToProps = (dispatch) => ({
+	toggleShowTask: () => dispatch(showButtonHandler())
+});
+export default connect(mapStateToProps, mapDispatchToProps)(ShowTask);

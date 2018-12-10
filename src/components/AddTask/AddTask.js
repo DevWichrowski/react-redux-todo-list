@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addTaskAction } from '../../store/actions/todoListActions';
+import { addTaskAction, addDialogHandler } from '../../store/actions/todoListActions';
 import './AddTask.scss';
 import { idGenerator } from '../../store/reducers/todoListReducer';
+import { Dialog } from 'primereact/dialog';
 
 class AddTask extends Component {
 	constructor(props) {
@@ -25,6 +26,7 @@ class AddTask extends Component {
 		return (
 			
 			<div className="AddTask">
+			<Dialog header="Adding new task" visible={this.props.todoList.addDialogVisible} width="350px" modal={true} onHide={this.props.toggleAddTaskDialog}>
 				<h2>Add Task</h2>
 				<p>name:</p>
 				<input onChange={this.saveName} />
@@ -38,13 +40,20 @@ class AddTask extends Component {
 				>
 					Add task
 				</button>
+				</Dialog>
 			</div>
+			
 		);
 	}
 }
 
 const mapDispatchToProps = (dispatch) => ({
-	addItem: (payload) => dispatch(addTaskAction(payload))
+	addItem: (payload) => dispatch(addTaskAction(payload)),
+	toggleAddTaskDialog: () => dispatch(addDialogHandler())
 });
 
-export default connect(null, mapDispatchToProps)(AddTask);
+const mapStateToProps = (state) => ({
+	todoList: state.todoList
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddTask);

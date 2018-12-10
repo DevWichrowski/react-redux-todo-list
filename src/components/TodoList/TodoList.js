@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Task from '../Task/Task';
+import { addDialogHandler } from '../../store/actions/todoListActions';
 
 class TodoList extends Component {
 	render() {
@@ -13,6 +14,7 @@ class TodoList extends Component {
 						</div>
 					);
 				})}
+				<button onClick={this.props.toggleAddTaskDialog}>asd</button>
 			</div>
 		);
 	}
@@ -22,4 +24,8 @@ const mapStateToProps = (state) => ({
 	todoList: state.todoList
 });
 
-export default connect(mapStateToProps, null)(TodoList);
+const mapDispatchToProps = (dispatch) => ({
+	toggleAddTaskDialog: () => dispatch(addDialogHandler())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(TodoList);

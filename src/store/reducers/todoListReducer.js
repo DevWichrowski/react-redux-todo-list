@@ -20,7 +20,8 @@ const initialState = {
 	showName: '',
 	showDescription: '',
 	editedItemId: '',
-	showTaskVisible: false
+	showTaskVisible: false,
+	addDialogVisible: false
 };
 
 export function todoReducer(state = initialState, action) {
@@ -53,6 +54,9 @@ export function todoReducer(state = initialState, action) {
 		}
 		case TodoListAction.SHOW_BUTTON_HANDLER: {
 			return {...state, showTaskVisible: !state.showTaskVisible}
+		}
+		case TodoListAction.ADD_DIALOG_HANDLER: {
+			return {...state, addDialogVisible: !state.addDialogVisible}
 		}
 
 		default: {

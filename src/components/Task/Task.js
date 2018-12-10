@@ -30,7 +30,7 @@ class Task extends Component {
 					label="Delete"
 					icon="pi pi-ban"
 					className="p-button-danger"
-					onClick={() => this.props.showTask(this.props)}
+					onClick={() => this.props.deleteTask(this.props)}
 				/>{' '}
 			</div>
 		);

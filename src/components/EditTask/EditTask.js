@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './EditTask.scss';
-import { editTaskAction } from '../../store/actions/todoListActions';
+import { Dialog } from 'primereact/dialog';
+import { editTaskAction, editDialogHandler } from '../../store/actions/todoListActions';
 
 class EditTask extends Component {
 	constructor(props) {
@@ -24,18 +25,25 @@ class EditTask extends Component {
 	render() {
 		return (
 			<div className="EditTask">
-				<p>You are editing {this.props.todoList.showName}</p>
-				<p>Enter new name</p>
-				<input onChange={this.saveName} />
-				<p>Enter new description</p>
-				<textarea onChange={this.saveDescription}/>
-				<br />
-				<button
-					onClick={() =>
-						this.props.editTask({ name: this.state.newName, description: this.state.newDescription })}
+				<Dialog
+					header={`You are editing ${this.props.todoList.showName} task`}
+					visible={this.props.todoList.editDialogVisible}
+					width="350px"
+					modal={true}
+					onHide={this.props.toggleEditDialogHandler}
 				>
-					Submit
-				</button>
+					<p>Enter new name</p>
+					<input onChange={this.saveName} />
+					<p>Enter new description</p>
+					<textarea onChange={this.saveDescription} />
+					<br />
+					<button
+						onClick={() =>
+							this.props.editTask({ name: this.state.newName, description: this.state.newDescription })}
+					>
+						Submit
+					</button>
+				</Dialog>
 			</div>
 		);
 	}
@@ -45,7 +53,8 @@ const mapStateToProps = (state) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-	editTask: (payload) => dispatch(editTaskAction(payload))
+	editTask: (payload) => dispatch(editTaskAction(payload)),
+	toggleEditDialogHandler: () => dispatch(editDialogHandler())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditTask);

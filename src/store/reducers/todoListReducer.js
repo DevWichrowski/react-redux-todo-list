@@ -21,7 +21,8 @@ const initialState = {
 	showDescription: '',
 	editedItemId: '',
 	showTaskVisible: false,
-	addDialogVisible: false
+	addDialogVisible: false,
+	editDialogVisible: false
 };
 
 export function todoReducer(state = initialState, action) {
@@ -53,10 +54,13 @@ export function todoReducer(state = initialState, action) {
 			};
 		}
 		case TodoListAction.SHOW_BUTTON_HANDLER: {
-			return {...state, showTaskVisible: !state.showTaskVisible}
+			return { ...state, showTaskVisible: !state.showTaskVisible };
 		}
 		case TodoListAction.ADD_DIALOG_HANDLER: {
-			return {...state, addDialogVisible: !state.addDialogVisible}
+			return { ...state, addDialogVisible: !state.addDialogVisible };
+		}
+		case TodoListAction.EDIT_DIALOG_HANDLER: {
+			return { ...state, editDialogVisible: !state.editDialogVisible };
 		}
 
 		default: {

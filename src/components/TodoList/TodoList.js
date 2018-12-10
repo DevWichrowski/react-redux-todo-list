@@ -14,7 +14,7 @@ class TodoList extends Component {
 						</div>
 					);
 				})}
-				<button onClick={this.props.toggleAddTaskDialog}>asd</button>
+				<button onClick={this.props.toggleAddTaskDialog}>Add Task</button>
 			</div>
 		);
 	}

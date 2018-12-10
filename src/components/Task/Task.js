@@ -1,5 +1,10 @@
 import React from 'react';
-import { deleteTaskAction, showTaskAction, showButtonHandler } from '../../store/actions/todoListActions';
+import {
+	deleteTaskAction,
+	showTaskAction,
+	showButtonHandler,
+	editDialogHandler
+} from '../../store/actions/todoListActions';
 import { connect } from 'react-redux';
 import { Component } from 'react';
 import { Button } from 'primereact/button';
@@ -25,7 +30,10 @@ class Task extends Component {
 						this.props.toggleShowTask();
 					}}
 				/>{' '}
-				<Button label="Edit" icon="pi pi-spinner" onClick={() => this.props.showTask(this.props)} />{' '}
+				<Button label="Edit" icon="pi pi-spinner" onClick={() => {
+					this.props.showTask(this.props);
+					this.props.toggleEditDialogHandler();
+					}} />{' '}
 				<Button
 					label="Delete"
 					icon="pi pi-ban"
@@ -40,7 +48,8 @@ class Task extends Component {
 const mapDispatchToProps = (dispatch) => ({
 	deleteTask: (payload) => dispatch(deleteTaskAction(payload)),
 	showTask: (payload) => dispatch(showTaskAction(payload)),
-	toggleShowTask: () => dispatch(showButtonHandler())
+	toggleShowTask: () => dispatch(showButtonHandler()),
+	toggleEditDialogHandler: () => dispatch(editDialogHandler())
 });
 
 export default connect(null, mapDispatchToProps)(Task);

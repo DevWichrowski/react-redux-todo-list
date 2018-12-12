@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Task from '../Task/Task';
 import { addDialogHandler } from '../../store/actions/todoListActions';
+import './TodoList.scss';
 
 class TodoList extends Component {
 	render() {

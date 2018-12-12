@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { addDialogHandler } from '../../store/actions/todoListActions';
 import { connect } from 'react-redux';
+import './AddTaskButton.scss';
 
 class AddTaskButton extends Component {
 	constructor(props) {
@@ -9,8 +10,8 @@ class AddTaskButton extends Component {
 
 	render() {
 		return (
-			<div>
-				<button onClick={this.props.toggleAddTaskDialog}>+</button>
+			<div className="AddTaskButton">
+				<button className="add-button" onClick={this.props.toggleAddTaskDialog}>+</button>
 			</div>
 		);
 	}

@@ -1,0 +1,18 @@
+.AddTaskButton {
+    .add-button {
+        border: 1px blue solid;
+        border-radius: 2000px;
+        background-color: blue;
+        float: right;
+        color: white;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-right: 100px;
+        margin-bottom: 100px;
+        font-size: 40px;
+        height: 70px;
+        width: 70px;
+        outline: none;
+    }
+}

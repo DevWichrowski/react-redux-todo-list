@@ -34,23 +34,43 @@ class AddTask extends Component {
 					onHide={this.props.toggleAddTaskDialog}
 				>
 					<p>Title:</p>
-					<input onChange={this.saveName} />
+					<input onChange={this.saveName} value={this.state.tempName} maxLength={70} />
 					<br />
 					<p>Description:</p>
-					<textarea onChange={this.saveDescription} />
+					<textarea onChange={this.saveDescription} value={this.state.tempDescription} maxLength={400} />
 					<br />
-					<Button
-						label="Add"
-						icon="pi pi-plus-circle"
-						className="p-button-success"
-						onClick={() => {
-							this.props.addItem({
-								id: idGenerator(),
-								name: this.state.tempName,
-								description: this.state.tempDescription
-							});
-						}}
-					/>
+					{this.state.tempName !== '' ? (
+						<Button
+							label="Add"
+							icon="pi pi-plus-circle"
+							className="p-button-success"
+							onClick={() => {
+								this.props.addItem({
+									id: idGenerator(),
+									name: this.state.tempName,
+									description: this.state.tempDescription
+								});
+								this.setState({ id: '', tempName: '', tempDescription: '' });
+								this.props.toggleAddTaskDialog();
+							}}
+						/>
+					) : (
+						<Button
+							label="Add"
+							icon="pi pi-plus-circle"
+							className="p-button-success"
+							onClick={() => {
+								this.props.addItem({
+									id: idGenerator(),
+									name: this.state.tempName,
+									description: this.state.tempDescription
+								});
+								this.setState({ id: '', tempName: '', tempDescription: '' });
+								this.props.toggleAddTaskDialog();
+							}}
+							disabled
+						/>
+					)}
 				</Dialog>
 			</div>
 		);

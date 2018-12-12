@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import './EditTask.scss';
 import { Dialog } from 'primereact/dialog';
 import { editTaskAction, editDialogHandler } from '../../store/actions/todoListActions';
+import { Button } from 'primereact/button';
 
 class EditTask extends Component {
 	constructor(props) {
@@ -37,12 +38,13 @@ class EditTask extends Component {
 					<p>Enter new description</p>
 					<textarea onChange={this.saveDescription} />
 					<br />
-					<button
-						onClick={() =>
-							this.props.editTask({ name: this.state.newName, description: this.state.newDescription })}
-					>
-						Submit
-					</button>
+					<Button
+						label="Edit"
+						icon="pi pi-spinner"
+						onClick={() => {
+							this.props.editTask({ name: this.state.newName, description: this.state.newDescription });
+						}}
+					/>
 				</Dialog>
 			</div>
 		);

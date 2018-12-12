@@ -1,0 +1,15 @@
+.Task{
+    display: flex;
+    flex-direction: row;
+    font-size: 20px;
+
+    .task-left-column{
+        width: 40%;
+    }
+    .task-right-column{
+        width: 60%;
+        float: right;
+        text-align: right;
+        margin-top: 10px;
+    }
+}

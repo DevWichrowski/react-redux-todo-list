@@ -3,17 +3,18 @@
 	min-height: 210px;
 	max-height: 650px;
 	overflow: scroll;
-	border: 2px solid gray;
-	width: 30%;
+	width: 70%;
 	margin: 30px auto;
+	padding: 25px;
+	background-color: white;
+	border-radius: 10px;
+	-webkit-box-shadow: 3px 7px 42px -2px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 3px 7px 42px -2px rgba(0, 0, 0, 0.75);
+	box-shadow: 3px 7px 42px -2px rgba(0, 0, 0, 0.75);
 }
 
 .border {
-	border-bottom: 2px solid gray;
+	border-bottom: 1px solid black;
 	width: 100%;
 	margin: 0 auto;
-
-	&:last-child {
-		border-bottom: none;
-	}
 }

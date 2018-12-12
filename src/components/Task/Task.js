@@ -11,6 +11,7 @@ import { Button } from 'primereact/button';
 import 'primereact/resources/themes/nova-light/theme.css';
 import 'primereact/resources/primereact.min.css';
 import 'primeicons/primeicons.css';
+import './Task.scss';
 
 class Task extends Component {
 	constructor(props) {
@@ -20,7 +21,10 @@ class Task extends Component {
 	render() {
 		return (
 			<div className="Task">
-				<p> {this.props.name} </p> <p> {this.props.description} </p>{' '}
+				<div className="task-left-column">
+					<p> {this.props.name} </p>
+				</div>
+				<div className="task-right-column">
 				<Button
 					label="Show"
 					icon="pi pi-info"
@@ -29,17 +33,22 @@ class Task extends Component {
 						this.props.showTask(this.props);
 						this.props.toggleShowTask();
 					}}
+				/>
+				<Button
+					label="Edit"
+					icon="pi pi-spinner"
+					onClick={() => {
+						this.props.showTask(this.props);
+						this.props.toggleEditDialogHandler();
+					}}
 				/>{' '}
-				<Button label="Edit" icon="pi pi-spinner" onClick={() => {
-					this.props.showTask(this.props);
-					this.props.toggleEditDialogHandler();
-					}} />{' '}
 				<Button
 					label="Delete"
 					icon="pi pi-ban"
 					className="p-button-danger"
 					onClick={() => this.props.deleteTask(this.props)}
 				/>{' '}
+				</div>
 			</div>
 		);
 	}

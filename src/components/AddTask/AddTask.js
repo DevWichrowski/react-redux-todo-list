@@ -4,6 +4,7 @@ import { addTaskAction, addDialogHandler } from '../../store/actions/todoListAct
 import './AddTask.scss';
 import { idGenerator } from '../../store/reducers/todoListReducer';
 import { Dialog } from 'primereact/dialog';
+import { Button } from 'primereact/button';
 
 class AddTask extends Component {
 	constructor(props) {
@@ -24,25 +25,34 @@ class AddTask extends Component {
 	};
 	render() {
 		return (
-			
 			<div className="AddTask">
-			<Dialog header="Adding new task" visible={this.props.todoList.addDialogVisible} width="350px" modal={true} onHide={this.props.toggleAddTaskDialog}>
-				<h2>Add Task</h2>
-				<p>name:</p>
-				<input onChange={this.saveName} />
-				<br />
-				<p>description:</p>
-				<textarea onChange={this.saveDescription} />
-				<br />
-				<button
-					onClick={() =>
-						this.props.addItem({id: idGenerator() ,name: this.state.tempName, description: this.state.tempDescription })}
+				<Dialog
+					header="Adding new task"
+					visible={this.props.todoList.addDialogVisible}
+					width="350px"
+					modal={true}
+					onHide={this.props.toggleAddTaskDialog}
 				>
-					Add task
-				</button>
+					<p>Title:</p>
+					<input onChange={this.saveName} />
+					<br />
+					<p>Description:</p>
+					<textarea onChange={this.saveDescription} />
+					<br />
+					<Button
+						label="Add"
+						icon="pi pi-plus-circle"
+						className="p-button-success"
+						onClick={() => {
+							this.props.addItem({
+								id: idGenerator(),
+								name: this.state.tempName,
+								description: this.state.tempDescription
+							});
+						}}
+					/>
 				</Dialog>
 			</div>
-			
 		);
 	}
 }

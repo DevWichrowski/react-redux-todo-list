@@ -32,7 +32,7 @@ class EditTask extends Component {
 					modal={true}
 					onHide={this.props.toggleEditDialogHandler}
 				>
-					<p>Enter new name</p>
+					<p>Enter new title</p>
 					<input onChange={this.saveName} />
 					<p>Enter new description</p>
 					<textarea onChange={this.saveDescription} />

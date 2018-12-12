@@ -25,29 +25,29 @@ class Task extends Component {
 					<p> {this.props.name} </p>
 				</div>
 				<div className="task-right-column">
-				<Button
-					label="Show"
-					icon="pi pi-info"
-					className="p-button-success"
-					onClick={() => {
-						this.props.showTask(this.props);
-						this.props.toggleShowTask();
-					}}
-				/>
-				<Button
-					label="Edit"
-					icon="pi pi-spinner"
-					onClick={() => {
-						this.props.showTask(this.props);
-						this.props.toggleEditDialogHandler();
-					}}
-				/>{' '}
-				<Button
-					label="Delete"
-					icon="pi pi-ban"
-					className="p-button-danger"
-					onClick={() => this.props.deleteTask(this.props)}
-				/>{' '}
+					<Button
+						label="Show"
+						icon="pi pi-info"
+						className="p-button-success"
+						onClick={() => {
+							this.props.showTask(this.props);
+							this.props.toggleShowTask();
+						}}
+					/>
+					<Button
+						label="Edit"
+						icon="pi pi-spinner"
+						onClick={() => {
+							this.props.showTask(this.props);
+							this.props.toggleEditDialogHandler();
+						}}
+					/>
+					<Button
+						label="Delete"
+						icon="pi pi-ban"
+						className="p-button-danger"
+						onClick={() => this.props.deleteTask(this.props)}
+					/>
 				</div>
 			</div>
 		);

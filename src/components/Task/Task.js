@@ -16,12 +16,19 @@ import './Task.scss';
 class Task extends Component {
 	constructor(props) {
 		super(props);
+		this.state = {
+			taskDone: false
+		}
+	}
+
+	lineThru = () =>{
+		this.setState({taskDone: !this.state.taskDone});
 	}
 
 	render() {
 		return (
 			<div className="Task">
-				<div className="task-left-column">
+				<div className={this.props.taskDone !== true ? "task-left-column" : "task-left-column-done"} onClick={() => this.lineThru()}>
 					<p> {this.props.name} </p>
 				</div>
 				<div className="task-right-column">

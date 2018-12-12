@@ -6,6 +6,12 @@
     .task-left-column{
         width: 40%;
     }
+    .task-left-column-done{
+        width: 40%;
+        color: red;
+        text-decoration: line-through;
+    }
+
     .task-right-column{
         width: 60%;
         height: 100%;

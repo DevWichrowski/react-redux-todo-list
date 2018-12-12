@@ -16,6 +16,7 @@ class App extends Component {
 				<ShowTask />
 				<EditTask />
 				<AddTaskButton />
+				
 			</div>
 		);
 	}

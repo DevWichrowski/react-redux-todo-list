@@ -10,11 +10,10 @@ class TodoList extends Component {
 				{this.props.todoList.tasks.map((item, index) => {
 					return (
 						<div className="border" key={index}>
-							<Task  id={item.id} name={item.name} description={item.description} />
+							<Task id={item.id} name={item.name} description={item.description} />
 						</div>
 					);
 				})}
-				<button onClick={this.props.toggleAddTaskDialog}>Add Task</button>
 			</div>
 		);
 	}

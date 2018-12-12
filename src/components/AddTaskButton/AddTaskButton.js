@@ -1,13 +1,27 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { addDialogHandler } from '../../store/actions/todoListActions';
+import { connect } from 'react-redux';
 
 class AddTaskButton extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+	constructor(props) {
+		super(props);
+	}
+
+	render() {
+		return (
+			<div>
+				<button onClick={this.props.toggleAddTaskDialog}>+</button>
+			</div>
+		);
+	}
 }
 
-export default AddTaskButton;
+const mapStateToProps = (state) => ({
+	todoList: state.todoList
+});
+
+const mapDispatchToProps = (dispatch) => ({
+	toggleAddTaskDialog: () => dispatch(addDialogHandler())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddTaskButton);

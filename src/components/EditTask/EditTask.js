@@ -34,17 +34,34 @@ class EditTask extends Component {
 					onHide={this.props.toggleEditDialogHandler}
 				>
 					<p>Enter new title</p>
-					<input onChange={this.saveName} />
+					<input onChange={this.saveName} maxLength={70}/>
 					<p>Enter new description</p>
-					<textarea onChange={this.saveDescription} />
+					<textarea onChange={this.saveDescription} maxLength={400}/>
 					<br />
-					<Button
-						label="Edit"
-						icon="pi pi-spinner"
-						onClick={() => {
-							this.props.editTask({ name: this.state.newName, description: this.state.newDescription });
-						}}
-					/>
+					{this.state.newName !== '' ? (
+						<Button
+							label="Edit"
+							icon="pi pi-spinner"
+							onClick={() => {
+								this.props.editTask({
+									name: this.state.newName,
+									description: this.state.newDescription
+								});
+							}}
+						/>
+					) : (
+						<Button
+							label="Edit"
+							icon="pi pi-spinner"
+							onClick={() => {
+								this.props.editTask({
+									name: this.state.newName,
+									description: this.state.newDescription
+								});
+							}}
+							disabled
+						/>
+					)}
 				</Dialog>
 			</div>
 		);

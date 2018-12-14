@@ -29,7 +29,7 @@ class EditTask extends Component {
 				<Dialog
 					header={`You are editing ${this.props.todoList.showName} task`}
 					visible={this.props.todoList.editDialogVisible}
-					width="350px"
+					width="600px"
 					modal={true}
 					onHide={this.props.toggleEditDialogHandler}
 				>

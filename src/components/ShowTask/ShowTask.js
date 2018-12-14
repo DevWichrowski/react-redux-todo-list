@@ -10,7 +10,7 @@ class ShowTask extends Component {
 	}
 	render() {
 		return (
-			<Dialog header={`${this.props.todoList.showName}`} visible={this.props.todoList.showTaskVisible} width="350px" modal={true} onHide={this.props.toggleShowTask}>
+			<Dialog header={`${this.props.todoList.showName}`} visible={this.props.todoList.showTaskVisible} width="600px" modal={true} onHide={this.props.toggleShowTask}>
 				{/* <div className="ShowTask"> */}
 					<p>Task name:</p>
 					<p><strong>{this.props.todoList.showName}</strong></p>

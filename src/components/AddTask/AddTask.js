@@ -29,7 +29,7 @@ class AddTask extends Component {
 				<Dialog
 					header="Adding new task"
 					visible={this.props.todoList.addDialogVisible}
-					width="350px"
+					width="600px"
 					modal={true}
 					onHide={this.props.toggleAddTaskDialog}
 				>

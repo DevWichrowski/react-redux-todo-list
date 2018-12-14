@@ -1,5 +1,8 @@
 .ShowTask {
-	border: 2px green solid;
-	width: 30%;
 	margin: 0 auto;
+
+	.desc {
+		white-space: normal;
+		word-break: break-all;
+	}
 }

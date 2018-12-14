@@ -44,6 +44,7 @@ class Task extends Component {
 					<Button
 						label="Edit"
 						icon="pi pi-spinner"
+						className="p-button-text"
 						onClick={() => {
 							this.props.showTask(this.props);
 							this.props.toggleEditDialogHandler();

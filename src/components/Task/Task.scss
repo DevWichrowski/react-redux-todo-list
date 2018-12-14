@@ -1,22 +1,36 @@
-.Task{
+.Task {
     display: flex;
     flex-direction: row;
-    font-size: 20px;
+    font-size: 18px;
 
-    .task-left-column{
+    .task-left-column {
         width: 40%;
     }
-    .task-left-column-done{
+
+    .task-left-column-done {
         width: 40%;
         color: red;
         text-decoration: line-through;
     }
 
-    .task-right-column{
+    .task-right-column {
         width: 60%;
         height: 100%;
         float: right;
         text-align: right;
-        margin-top: 15px;
+        margin-top: 12px;
+        margin-bottom: 10px;
+    }
+
+    .p-button-success {
+        border-radius: 0;
+    }
+
+    .p-button-text {
+        border-radius: 0!important;
+    }
+
+    .p-button-danger {
+        border-radius: 0;
     }
 }

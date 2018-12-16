@@ -1,18 +1,16 @@
 import React, { Component } from 'react';
 import './App.scss';
-import TodoList from './components/TodoList/TodoList';
-import AddTask from './components/AddTask/AddTask';
-import ShowTask from './components/ShowTask/ShowTask';
-import EditTask from './components/EditTask/EditTask';
-import AddTaskButton from './components/AddTaskButton/AddTaskButton';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Main from './components/Main/Main';
 
 class App extends Component {
 	render() {
 		return (
+			<BrowserRouter>
 				<div className="App">
-				<Main />
+					<Route exact path="/" component={Main} />
 				</div>
+			</BrowserRouter>
 		);
 	}
 }

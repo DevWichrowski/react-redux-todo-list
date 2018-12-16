@@ -5,18 +5,14 @@ import AddTask from './components/AddTask/AddTask';
 import ShowTask from './components/ShowTask/ShowTask';
 import EditTask from './components/EditTask/EditTask';
 import AddTaskButton from './components/AddTaskButton/AddTaskButton';
+import Main from './components/Main/Main';
 
 class App extends Component {
 	render() {
 		return (
-			<div className="App">
-				<TodoList />
-				<br />
-				<AddTask />
-				<ShowTask />
-				<EditTask />
-				<AddTaskButton />
-			</div>
+				<div className="App">
+				<Main />
+				</div>
 		);
 	}
 }

@@ -27,3 +27,13 @@ textarea{
 	width: 80%;
 	height: 100px;
 }
+
+
+@media screen and (max-width: 1100px){
+	.p-dialog {
+		width: 100%!important;
+		margin: 0 auto!important;
+		position: absolute!important;
+		left: 0!important;
+	}
+}

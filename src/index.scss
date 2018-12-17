@@ -1,0 +1,25 @@
+@import "~normalize.css/normalize.css";
+
+* {
+	box-sizing: border-box;
+}
+
+html{
+	height: 100%;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+body{
+	height: 100%;
+	background-image: url('https://wallpapercave.com/wp/wp2697056.jpg');
+}
+
+#root{
+	height: 100%;
+}
+.p-overflow-hidden{
+	position: unset!important;
+}

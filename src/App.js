@@ -2,15 +2,16 @@ import React, { Component } from 'react';
 import './App.scss';
 import { BrowserRouter, Route } from 'react-router-dom';
 import Main from './components/Main/Main';
+import { HashRouter } from 'react-router-dom';
 
 class App extends Component {
 	render() {
 		return (
-			<BrowserRouter>
+			<HashRouter basename="/">
 				<div className="App">
-					<Route exact path="/" component={Main} />
+					<Main />
 				</div>
-			</BrowserRouter>
+			</HashRouter>
 		);
 	}
 }

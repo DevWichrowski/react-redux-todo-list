@@ -4,16 +4,16 @@ self.__precacheManifest = [
     "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-700.623e3205.woff"
   },
   {
-    "revision": "7fbeac296289290b1d52",
-    "url": "/react-redux-todo-list/static/css/main.98b7a69a.chunk.css"
+    "revision": "6bea70dfc04ad132f18d",
+    "url": "/react-redux-todo-list/static/css/main.dc661f96.chunk.css"
   },
   {
     "revision": "38d77552b0353684a208177482d5b6ee",
     "url": "/react-redux-todo-list/static/media/primeicons.38d77552.svg"
   },
   {
-    "revision": "9be594715e6cb3e48bf4",
-    "url": "/react-redux-todo-list/static/js/1.9be59471.chunk.js"
+    "revision": "ed206b4467ae40c8e048",
+    "url": "/react-redux-todo-list/static/js/1.ed206b44.chunk.js"
   },
   {
     "revision": "1263f012db908d730da0",
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-regular.bf2d0783.woff"
   },
   {
-    "revision": "7fbeac296289290b1d52",
-    "url": "/react-redux-todo-list/static/js/main.7fbeac29.chunk.js"
+    "revision": "6bea70dfc04ad132f18d",
+    "url": "/react-redux-todo-list/static/js/main.6bea70df.chunk.js"
   },
   {
     "revision": "177cc92d2e8027712a8c1724abd272cd",
@@ -68,12 +68,12 @@ self.__precacheManifest = [
     "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-700.7e08cc65.ttf"
   },
   {
-    "revision": "27ef0b062b2e221df16f3bbd97c2dca8",
-    "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-300.27ef0b06.svg"
-  },
-  {
     "revision": "7aab4c13671282c90669eb6a10357e41",
     "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-regular.7aab4c13.svg"
+  },
+  {
+    "revision": "27ef0b062b2e221df16f3bbd97c2dca8",
+    "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-300.27ef0b06.svg"
   },
   {
     "revision": "2e00b2635b51ba336b4b67a5d0bc03c7",
@@ -100,11 +100,11 @@ self.__precacheManifest = [
     "url": "/react-redux-todo-list/static/media/primeicons.473e2a74.ttf"
   },
   {
-    "revision": "9be594715e6cb3e48bf4",
-    "url": "/react-redux-todo-list/static/css/1.554ef221.chunk.css"
+    "revision": "ed206b4467ae40c8e048",
+    "url": "/react-redux-todo-list/static/css/1.5b38bcec.chunk.css"
   },
   {
-    "revision": "d4a771ec920fe4498ada4f5081dde536",
+    "revision": "d2d27e15695ac1490a3eb9522b09e84b",
     "url": "/react-redux-todo-list/index.html"
   }
 ];

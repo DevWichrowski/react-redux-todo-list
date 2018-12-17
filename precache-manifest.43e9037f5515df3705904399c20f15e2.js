@@ -4,28 +4,28 @@ self.__precacheManifest = [
     "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-700.623e3205.woff"
   },
   {
-    "revision": "b8dd952ee321c99c14d2",
-    "url": "/react-redux-todo-list/static/css/main.1550da4f.chunk.css"
+    "revision": "7fbeac296289290b1d52",
+    "url": "/react-redux-todo-list/static/css/main.98b7a69a.chunk.css"
   },
   {
     "revision": "38d77552b0353684a208177482d5b6ee",
     "url": "/react-redux-todo-list/static/media/primeicons.38d77552.svg"
   },
   {
-    "revision": "3e5d881676fb8841c859",
-    "url": "/react-redux-todo-list/static/js/1.3e5d8816.chunk.js"
+    "revision": "9be594715e6cb3e48bf4",
+    "url": "/react-redux-todo-list/static/js/1.9be59471.chunk.js"
   },
   {
     "revision": "1263f012db908d730da0",
     "url": "/react-redux-todo-list/static/js/runtime~main.1263f012.js"
   },
   {
-    "revision": "60c866748ff15f5b347fdba64596b1b1",
-    "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-300.60c86674.woff2"
-  },
-  {
     "revision": "76b56857ebbae3a5a689f213feb11af0",
     "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-300.76b56857.eot"
+  },
+  {
+    "revision": "60c866748ff15f5b347fdba64596b1b1",
+    "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-300.60c86674.woff2"
   },
   {
     "revision": "9dce7f01715340861bdb57318e2f3fdc",
@@ -52,8 +52,8 @@ self.__precacheManifest = [
     "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-regular.bf2d0783.woff"
   },
   {
-    "revision": "b8dd952ee321c99c14d2",
-    "url": "/react-redux-todo-list/static/js/main.b8dd952e.chunk.js"
+    "revision": "7fbeac296289290b1d52",
+    "url": "/react-redux-todo-list/static/js/main.7fbeac29.chunk.js"
   },
   {
     "revision": "177cc92d2e8027712a8c1724abd272cd",
@@ -92,19 +92,19 @@ self.__precacheManifest = [
     "url": "/react-redux-todo-list/static/media/primeicons.b8eccb10.eot"
   },
   {
-    "revision": "473e2a746d3c151d7dcaa626a7c84c60",
-    "url": "/react-redux-todo-list/static/media/primeicons.473e2a74.ttf"
-  },
-  {
     "revision": "71bb3d79dcf18b45ae845409e7c2ada3",
     "url": "/react-redux-todo-list/static/media/primeicons.71bb3d79.woff"
   },
   {
-    "revision": "3e5d881676fb8841c859",
-    "url": "/react-redux-todo-list/static/css/1.324a61cb.chunk.css"
+    "revision": "473e2a746d3c151d7dcaa626a7c84c60",
+    "url": "/react-redux-todo-list/static/media/primeicons.473e2a74.ttf"
   },
   {
-    "revision": "42be73a70412794864fa46bfa7d44967",
+    "revision": "9be594715e6cb3e48bf4",
+    "url": "/react-redux-todo-list/static/css/1.554ef221.chunk.css"
+  },
+  {
+    "revision": "d4a771ec920fe4498ada4f5081dde536",
     "url": "/react-redux-todo-list/index.html"
   }
 ];

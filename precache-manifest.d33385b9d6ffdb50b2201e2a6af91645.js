@@ -4,8 +4,8 @@ self.__precacheManifest = [
     "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-700.623e3205.woff"
   },
   {
-    "revision": "43e45e8f2ad3778b2332",
-    "url": "/react-redux-todo-list/static/css/main.1550da4f.chunk.css"
+    "revision": "e50a007313cf4510f5ec",
+    "url": "/react-redux-todo-list/static/css/main.72a5968d.chunk.css"
   },
   {
     "revision": "38d77552b0353684a208177482d5b6ee",
@@ -20,16 +20,16 @@ self.__precacheManifest = [
     "url": "/react-redux-todo-list/static/js/runtime~main.1263f012.js"
   },
   {
-    "revision": "60c866748ff15f5b347fdba64596b1b1",
-    "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-300.60c86674.woff2"
-  },
-  {
     "revision": "76b56857ebbae3a5a689f213feb11af0",
     "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-300.76b56857.eot"
   },
   {
     "revision": "9dce7f01715340861bdb57318e2f3fdc",
     "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-regular.9dce7f01.eot"
+  },
+  {
+    "revision": "60c866748ff15f5b347fdba64596b1b1",
+    "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-300.60c86674.woff2"
   },
   {
     "revision": "cffb686d7d2f4682df8342bd4d276e09",
@@ -44,16 +44,16 @@ self.__precacheManifest = [
     "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-700.148a6749.eot"
   },
   {
-    "revision": "bf2d0783515b7d75c35bde69e01b3135",
-    "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-regular.bf2d0783.woff"
-  },
-  {
     "revision": "521d17bc9f3526c690e8ada6eee55bec",
     "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-300.521d17bc.woff"
   },
   {
-    "revision": "43e45e8f2ad3778b2332",
-    "url": "/react-redux-todo-list/static/js/main.43e45e8f.chunk.js"
+    "revision": "bf2d0783515b7d75c35bde69e01b3135",
+    "url": "/react-redux-todo-list/static/media/open-sans-v15-latin-regular.bf2d0783.woff"
+  },
+  {
+    "revision": "e50a007313cf4510f5ec",
+    "url": "/react-redux-todo-list/static/js/main.e50a0073.chunk.js"
   },
   {
     "revision": "177cc92d2e8027712a8c1724abd272cd",
@@ -88,6 +88,10 @@ self.__precacheManifest = [
     "url": "/react-redux-todo-list/static/media/line.567f5738.gif"
   },
   {
+    "revision": "b8eccb1059ea5faaf6d8b7d457ccfd09",
+    "url": "/react-redux-todo-list/static/media/primeicons.b8eccb10.eot"
+  },
+  {
     "revision": "473e2a746d3c151d7dcaa626a7c84c60",
     "url": "/react-redux-todo-list/static/media/primeicons.473e2a74.ttf"
   },
@@ -96,15 +100,11 @@ self.__precacheManifest = [
     "url": "/react-redux-todo-list/static/media/primeicons.71bb3d79.woff"
   },
   {
-    "revision": "b8eccb1059ea5faaf6d8b7d457ccfd09",
-    "url": "/react-redux-todo-list/static/media/primeicons.b8eccb10.eot"
-  },
-  {
     "revision": "e7c1a5e0b3bc34acb803",
     "url": "/react-redux-todo-list/static/css/1.324a61cb.chunk.css"
   },
   {
-    "revision": "87e5be4a7678b9fdcfc58867de77e95a",
+    "revision": "35b4511f8ddf6bacb3c42de6c93fe4a7",
     "url": "/react-redux-todo-list/index.html"
   }
 ];

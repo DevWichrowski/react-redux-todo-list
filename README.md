@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Demo : https://devwichrowski.github.io/react-redux-todo-list/
+## Demo : https://devwichrowski.github.io/react-redux-todo-list/
 
 ## Available Scripts
 
